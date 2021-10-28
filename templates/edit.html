@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Text</title>
+</head>
+<body>
+<center>
+    <h1>Mesajını Güncelle</h1>
+    <hr>
+<form method="POST" action="/updatem/{{displayid.id}}">
+    {% csrf_token %}
+    <table border="1">
+        <tr>
+            <td>Id</td>
+            <td><input type="text" name="id" value="{{displayid.id}}" readonly></td>
+
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name ="title" value="{{displayid.title}}"></td>
+        </tr>
+        <tr>
+            <td>Mesaj</td>
+            <td><input type="text" name="text" value="{{displayid.text}}"></td>
+        </tr>
+    </table>
+    <input type="submit" value="Update" >
+    <hr>
+    <p>Hocam anasayfaya dönme butonunu yetiştiremedim adres bilgisinden geri dönebilirsiniz</p>
+
+    </form>
+</center>
+</body>
+</html>
